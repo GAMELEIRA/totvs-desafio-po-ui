@@ -1,11 +1,13 @@
+import { Tarefa } from './Tarefa';
 import { Credencial } from './Credencial';
 export class Pessoa {
 
   constructor(
     private readonly _id: number,
-    public readonly nome: string,
-    public readonly sobrenome: string,
-    private readonly _credencial: Credencial) { }
+    public nome: string,
+    public sobrenome: string,
+    private _credencial: Credencial,
+    public tarefas: Array<Tarefa>) { }
 
   get id(): number {
     return this._id;

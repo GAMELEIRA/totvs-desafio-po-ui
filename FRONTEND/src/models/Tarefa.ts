@@ -6,8 +6,8 @@ export class Tarefa {
     public titulo: string,
     public descricao: string,
     private readonly _dataCriacao: Date,
-    public readonly dataInicio: Date,
-    public readonly dataFim: Date,
+    public dataInicio: Date,
+    public dataFim: Date,
     public categoria: Categoria,
     public status: Status
   ) {
