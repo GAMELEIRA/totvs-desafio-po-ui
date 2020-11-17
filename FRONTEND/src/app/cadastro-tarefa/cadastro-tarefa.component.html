@@ -1,0 +1,52 @@
+<div>
+  <div class="container form-centralizado col-4">
+    <form>
+      <div class="form-group form-titulo">
+        <h1>Cadastro de tarefa</h1>
+        <p>Cadastre uma tarefa para organizar sua vida.</p>
+      </div>
+      <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Informe o título da tarefa" [(ngModel)]="titulo"
+          autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <input type="text" id="descricao" name="titulo" class="form-control" placeholder="Informe a descrição da tarefa" [(ngModel)]="descricao"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="dataInicio">Data Inicio</label>
+        <input type="date" id="dataInicio" name="dataInicio" class="form-control" [(ngModel)]="dataInicio"
+          placeholder="Informe a data de inicio da tarefa" required>
+      </div>
+      <div class="form-group">
+        <label for="dataFim">Data Fim</label>
+        <input type="date" id="dataFim" name="dataFim" class="form-control" [(ngModel)]="dataFim"
+          placeholder="Informe a data fim da tarefa" required>
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select name="tipo" id="tipo" placeholder="Seleccione o tipo da tarefa:" class="form-control" required [(ngModel)]="tipo">
+          <option value="TRABALHO">Trabalho</option>
+          <option value="CASA">Casa</option>
+          <option value="ESTUDOS">Estudos</option>
+          <option value="ACADEMIA">Academia</option>
+          <option value="FACULDADE">Faculdade</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select name="status" id="status" placeholder="Seleccione o status da tarefa:" class="form-control" required [(ngModel)]="status">
+          <option value="TO_DO">TO_DO</option>
+          <option value="DOING">DOING</option>
+          <option value="BLOCK">BLOCK</option>
+          <option value="TEST">TEST</option>
+          <option value="DONE">DONE</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-outline-success btn-lg btn-block"
+       (click)="cadastrarTarefa(titulo, descricao, dataInicio, dataFim, tipo, status)">Acesso</button>
+    </form>
+  </div>
+</div>

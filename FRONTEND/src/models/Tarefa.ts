@@ -1,11 +1,11 @@
 import { Status } from '../enums/Status';
 import { Categoria } from '../enums/Categoria';
 export class Tarefa {
+  private _id: number;
   constructor(
-    private readonly _id: number,
     public titulo: string,
     public descricao: string,
-    private readonly _dataCriacao: Date,
+    private _dataCriacao: Date,
     public dataInicio: Date,
     public dataFim: Date,
     public categoria: Categoria,

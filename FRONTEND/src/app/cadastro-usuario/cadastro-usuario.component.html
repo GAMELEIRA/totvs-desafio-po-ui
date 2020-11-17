@@ -1,0 +1,33 @@
+<app-cabecalho></app-cabecalho>
+<div id="fundo-cadastro-usuario">
+<div class="container form-centralizado col-4">
+  <form>
+    <div class="form-group form-titulo">
+      <h1>Cadastro de Usuário</h1>
+      <p>Cadastra-se para ter acesso ao nosso sistema.</p>
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" class="form-control" placeholder="Informe seu nome" [(ngModel)]="nome"
+       autofocus required=true>
+    </div>
+    <div class="form-group">
+      <label for="sobrenome">Sobrenome</label>
+      <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Informe seu sobrenome" [(ngModel)]="sobrenome"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" class="form-control" autocomplete="email" [(ngModel)]="email"
+        placeholder="Informe seu e-mail" required>
+    </div>
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input type="password" name="senha" id="senha" class="form-control" autocomplete="new-password" [(ngModel)]="senha"
+        placeholder="Informe sua senha" required>
+    </div>
+    <button type="button" class="btn btn-outline-success btn-lg btn-block" (click)="criarPessoa(nome, sobrenome, email, senha)">Cadastrar</button>
+  </form>
+</div>
+</div>
+<app-footer></app-footer>

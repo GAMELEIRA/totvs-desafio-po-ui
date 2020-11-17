@@ -1,9 +1,9 @@
 export class Credencial {
-
+  private _id?: number;
   constructor(
-    private readonly _id: number,
     private _email: string,
-    private _senha: string) { }
+    private _senha: string
+  ) { }
 
   get id(): number {
     return this._id;

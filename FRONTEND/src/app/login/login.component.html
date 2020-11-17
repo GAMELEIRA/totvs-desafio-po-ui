@@ -1,17 +1,23 @@
+<app-cabecalho></app-cabecalho>
+<div class="form-fundo-acesso">
 <div class="container form-centralizado col-4">
   <form>
+    <div class="form-group form-titulo">
+      <h1>Acesso</h1>
+      <p>Informe suas credencias para entrar no sistema.</p>
+    </div>
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email">E-mail</label>
       <input type="email" id="email" class="form-control" name="email" autocomplete="email"
-        placeholder="Informe o seu e-mail" autofocus required>
+        placeholder="Informe o seu e-mail" autofocus required [(ngModel)]="email">
     </div>
     <div class="form-group">
       <label for="password">Senha</label>
       <input type="password" id="password" class="form-control" name="password" placeholder="Informe a sua senha"
-        required>
+        required [(ngModel)]="senha">
     </div>
-    <button type="button" class="btn btn-outline-success btn-lg btn-block">Acesso</button>
-
+    <button type="button" class="btn btn-outline-success btn-lg btn-block" (click)="realizarAcesso(email, senha)">Acesso</button>
   </form>
 </div>
-
+</div>
+<app-footer></app-footer>
