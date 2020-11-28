@@ -23,7 +23,6 @@ export class CadastroTarefaService {
       if (res.body[0].tarefas === undefined) {
         res.body[0].tarefas = [];
         res.body[0].tarefas.push(tarefa);
-        console.log(res.body.tarefas);
         console.log("Não têm tarefas");
         console.log(res.body);
         this._http.put(this.baseUrl.concat('/').concat(res.body[0].id), res.body[0], {observe: 'body'}).subscribe(resp => {

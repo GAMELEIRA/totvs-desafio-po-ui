@@ -39,7 +39,7 @@ import { CadastroTarefaComponent } from './cadastro-tarefa/cadastro-tarefa.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [TarefasComponent],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
